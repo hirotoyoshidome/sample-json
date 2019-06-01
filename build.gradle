@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+
+mainClassName = 'SampleJSONMain'
+
+repositories {
+	mavenCentral()
+}
+
+jar{
+	baseName = 'sampleJSON-gradle'
+	version = '0.1.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies{
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.9.5'
+	compile 'com.fasterxml.jackson.core:jackson-core:2.9.5'
+	compile 'com.google.code.gson:gson:2.8.4'
+}
